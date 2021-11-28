@@ -1,6 +1,6 @@
 class Timer {
-  constructor(durantionInput, startButton, pauseButton){
-    this.durantionInput = durantionInput;
+  constructor(durationInput, startButton, pauseButton){
+    this.durationInput = durationInput;
     this.startButton = startButton;
     this.pauseButton = pauseButton;
 
@@ -18,7 +18,8 @@ class Timer {
   }
 
   tick = () => {
-    console.log('tick')
+    const timeRemaining = parseFloat(this.durationInput.value);
+    this.durationInput.value = timeRemaining - 1;
   }
 }
 
